@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.0.1/mammoth.browser.min.js"></script>
+    <style>
+        #pedido{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 50px;
+            background-color:  rgb(2, 2, 119);
+            color: white;
+            font-size: 1.4rem;
+        }
+    </style>
 </head>
 <body>
+    <a href="../Loja/">Continuar comprando</a>
     <h1>Carrinho</h1>
+    <div id="lista"></div>
+    <h2 id="total"></h2>
+    <button onclick="gerarDocumentos()">Realizar pedidos</button>
+    <p id="pedido">
+        Pedido gerado com sucesso
+        <button id="sc" onclick="successClose()">❌</button>
+    </p>
+    <script src="script.js"></script>
 </body>
 </html>
